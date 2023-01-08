@@ -5,17 +5,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'vim-airline/vim-airline'
+let mapleader = ';' " Key remapping
+
+Plugin 'VundleVim/Vundle.vim' " Vundle
+Plugin 'preservim/nerdtree' " nerdtree
+Plugin 'vim-airline/vim-airline' " vim-airline
 Plugin 'vim-airline/vim-airline-themes'
 
-" NERDTREE Preferences
+" NERDTREE preferences
 let NERDTreeShowHidden=1
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize=20
 
-" vim-airline Preferences
+" vim-airline preferences
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#tabline#enabled = 1
@@ -23,82 +25,74 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 map <C-B> :NERDTreeToggle<CR>
 
+
 set t_Co=256
 set encoding=utf-8
 
-" Set `PaperColor` color scheme 
+" Set `PaperColor` color scheme
 set background=dark
 colorscheme PaperColor
 
 syntax on
 
 " Default to indenting 4 spaces
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
 
-" Mouse support
-set mouse=a
+set mouse=a " Mouse support
 
-" Highlight matching braces
-set showmatch 
+set showmatch " Highlight matching braces
 
-" Show bottom rule
-set ruler
+set ruler " Show bottom ruler
 
-" Split windows to equal size
-set equalalways
+set equalalways " Split windows to equal sizes
 
-" Enable comment line auto formatting
-set formatoptions=croq
+set formatoptions=croq " Enable comment line auto formatting
 
-" Increase history
-set history=10000
+set history=10000 " Increase history
 
-" Set window title to file name
-set title
+set title " Set window title to file name
 
-" Searching
-set hlsearch
-set ignorecase
-set smartcase
-set incsearch
+set number " Show line numbers
 
-" Never scroll off
-set scrolloff=5
+set spell " Enable spellchecking
 
-" Better UNIX-like autocomplete
-set wildmode=longest,list
+set noerrorbells " Disable beep on errors
+set visualbell " Flash screen on errors
 
-" Copy-paste from system keyboard
-set clipboard=unnamed
+set cursorline " Highlight underneath cursor
 
-" Don't redraw when running macros
-set lazyredraw
+set hlsearch " Highlight search pattern
+set ignorecase " Case-insensitive
+set smartcase " Smart-case
+set incsearch " Increment search
 
-" Visually wrap lines
-set wrap
+set scrolloff=5 " Never scroll off
 
-" Only wrap on `good` characters
-set linebreak
+set wildmode=longest,list " Better UNIX-like autocomplete
 
-" Better backspacing
-set backspace=indent,eol,start
+set clipboard=unnamed " Copy-paste from system keyboard
 
-" Speed up VIM
-set ttyfast
+set lazyredraw " Don't redraw when running macros
 
-" Scrolling maintains horizontal position
-set nostartofline
+set noswapfile " Disable swap files
 
-" Strip whitespaces from end of lines when writing to file
-autocmd BufWritePre * :%s/\s\+$//e
+set wrap " Visually wrap lines
 
-" Buffer Preferences
-let mapleader = ';'
+set linebreak " Wrap on `good` characters
 
+set backspace=indent,eol,start " Better backspacing
+
+set ttyfast " Speed up Vim
+
+set nostartofline " Scrolling maintains horizontal position
+
+autocmd BufWritePre * :%s/\s\+$//e " Strip white-spaces when writing to file
+
+" Buffer preferences
 nnoremap <Leader>1 :buffer 1<CR>
 nnoremap <Leader>2 :buffer 2<CR>
 nnoremap <Leader>3 :buffer 3<CR>
