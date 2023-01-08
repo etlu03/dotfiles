@@ -23,7 +23,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 map <C-B> :NERDTreeToggle<CR>
 
-
 set t_Co=256
 set encoding=utf-8
 
@@ -117,4 +116,3 @@ nnoremap <Leader>d :bnext<CR>
 call vundle#end()
 
 filetype plugin indent on
-
