@@ -13,6 +13,10 @@ ENABLE_CORRECTION="true"
 plugins=(
     git
     zsh-autosuggestions
+    sudo
+    copyfile
+    copybuffer
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh
