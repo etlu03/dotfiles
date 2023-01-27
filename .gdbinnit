@@ -13,4 +13,4 @@ set confirm off # auto confirms commands
 
 set $limit = 10 # store limit in variable
 
-set print elements limit
+set print elements $limit
