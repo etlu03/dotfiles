@@ -10,7 +10,3 @@ set logging overwrite on # overwrite log file
 
 set print pretty on # displays values of classes, structs etc. nicely
 set confirm off # auto confirms commands
-
-set $limit = 10 # store limit in variable
-
-set print elements $limit
