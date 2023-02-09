@@ -25,9 +25,10 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 map <C-B> :NERDTreeToggle<CR>
 
-
 set t_Co=256
 set encoding=utf-8
+
+set showmode
 
 " Set `PaperColor` color scheme
 set background=dark
@@ -59,6 +60,8 @@ set title " Set window title to file name
 set number " Show line numbers
 
 set spell " Enable spellchecking
+
+set pastetoggle=<F2> " Bind <F2> for better copy-pasting
 
 set noerrorbells " Disable beep on errors
 set visualbell " Flash screen on errors
